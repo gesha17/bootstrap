@@ -1,0 +1,129 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+.nav-link:hover{
+	background-color:#444;
+}
+
+.nav-content{
+	position:absolute;
+	top:50px;
+	background-color:#343A40;
+	overflow:hidden;
+	max-height:0;
+	transition:min-height 400ms ease-in;
+
+}
+.nav-sub{
+	padding:20px;
+}
+.nav-sub ul {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+.nav-sun ul li a{
+	display:inline-block;
+	padding: 5px 0;
+}
+
+.nav-link:focus{
+	background-color:#444;
+}
+
+
+.cardbutton {
+	padding-left: 10px;
+	padding-bottom:10px;
+}
+
+
+.cardimage{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.commentBox {
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.buttonShare {
+  padding-top: 12px;
+}
+
+.textBox {
+  padding-top: 10px;
+}
+
+#dismissCS {
+  padding-right: 30px
+}
+
+#loginUsername{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#loginPass{
+  margin-bottom: 15px;
+}
+
+#UsernamePass{
+  color: white;
+  display:none;
+}
+
+#ShotsPage {
+  display:none;
+}
+#Specials{
+  display: none;
+}
+
+.recipe{
+  display:none;
+}
+
+.modalImage{
+  max-width: 100%;
+   max-height: 100%;
+}
+
+#commentUserName {
+  margin-left: 10px;
+}
+
+#userComment {
+  margin-left: 20px;
+}
+
+#commentForm{
+  margin-left: 30px;
+}
+
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+
+#profileButton{
+  /*display:none;*/
+}
+/* image chooser  */
+
+
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

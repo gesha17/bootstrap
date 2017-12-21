@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BartenderPro.com</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+	<script src ="js/javascript.js"></script>
+	<script src ="js/userinfo.js"></script>\
+    <script src ="js/cocktails.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">BartenderPro.com</a>
+        <a id = "UsernamePass">Welcome Georgi!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle = "dropdown" data-target = "loginDropdown" id = "loginButtonNav" href="#">Login</a>
+              <ul class = "dropdown-menu" id = "loginDropdown">
+                <div class="container">
+                	<div class="row">
+                    	<div class="container" id="formContainer">
+                          <form class="form-signin" id="login" role="form">
+                            <h3 class="form-signin-heading">Please sign in</h3>
+                            <a href="#" id="flipToRecover" class="flipLink">
+                              <div id="triangle-topright"></div>
+                            </a>
+                            <input type="text" class="form-control" name="username" id="loginUsername" placeholder="Username" required autofocus>
+                            <input type="password" class="form-control" name="loginPass" id="loginPass" placeholder="Password" required>
+                            <button class="btn btn-lg btn-primary btn-block" type="button" id = "singInButton">Sign in</button>
+                            <button class="btn btn-lg btn-primary btn-block" type="button" id = "registerButton" data-toggle="modal" data-target="#RegisterModal">New? Register here!</button>
+                          </form>
+                        </div> <!-- /container -->
+                	</div>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item" id = "profileButton">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#profileModal">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Find more</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+
+          <h1 class="my-4">Categories</h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item" id = "buttonMostPopular">Most Popular</a>
+            <a href="#" class="list-group-item" id = "buttonShots">Shots</a>
+            <a href="#" class="list-group-item" id = "buttonSpecials">Specials</a>
+          </div>
+
+          <h1 class="my-4">Actions</h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item" id = "1buttonMostPopular">Search for a Cocktail</a>
+            <a href="#" class="list-group-item" id = "2buttonShots">What can I make?(Beta)</a>
+            <a href="#" class="list-group-item" id = "3buttonSpecials" data-toggle="modal" data-target="#SubmitModal">Submit a new Cocktail!</a>
+          </div>
+
+        </div>
+
+
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+          <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block img-fluid" src="https://irp-cdn.multiscreensite.com/779adb02/dms3rep/multi/desktop/Cocktail%20List%203-900x350.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="https://irp-cdn.multiscreensite.com/779adb02/dms3rep/multi/desktop/Cocktail%20List%203-900x350.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="https://d37slghchgusxj.cloudfront.net/hero_banners/images/000/003/382/large/Screen_Shot_2016-04-02_at_2.45.51_PM.jpg?1508449621" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+<!-- Container for Cocktails -->
+
+          <div class = "row" id = "cocktailsView">
+
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 mb-4" id = "cocktailTemplate" style="display: none">
+              <div class="card h-100">
+			  <div width = 100%>
+                <a href="#"><img class="card-img-top" src="https://i.imgur.com/5DHXcIp.png" alt=""  data-toggle="modal" data-target="#RecipeModal" id = "cardImageTemplate" >
+                <div class = "recipeClass" style = "Display: None">
+                      <h3 id = "cocktailName"></h3>
+                      <h4>Ingredients:</h4>
+                      <p id = "ingredients" ></p>
+                      <h3>Recipe:</h3>
+                      <p id = "recipe"></p>
+                  </div>
+            </a>
+				</div>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#" id ="cardTitleTemplate">Name</a>
+                  </h4>
+                  <h5 id = "cardHardnessTemplate">Hardness level</h5>
+                  <p class="card-text" id = "cardDescriptionTemplate">Description</p>
+                </div>
+				<div class = "cardbutton">
+				<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"  >Comment</button>
+				</div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+        <!-- Recipe Modal-->
+      <div id="SubmitModal" class="modal fade" role="dialog">
+  			<div class="modal-dialog">
+
+  			<!-- Modal content-->
+  				<div class="modal-content">
+  					<div class="modal-header">
+  						<button type="button" class="close" data-dismiss="modal" id = "dismissCS4">&times;</button>
+  						<h4 class="modal-title">Submit</h4>
+  					</div>
+  					<div class="modal-body">
+                        <input type="text" class="form-control" name="username" id="submitName" placeholder="Cocktail name" required autofocus>
+                        <input type="text" class="form-control" name="username" id="submitCategory" placeholder="Category" required autofocus>
+                        <input type="text" class="form-control" name="username" id="submitIngredients" placeholder="Ingredients(Separate with comma)" required autofocus>
+                        <input type="text" class="form-control" name="username" id="submitRecipe" placeholder="Recipe(Separate with dot)" required autofocus>
+                        <input type="text" class="form-control" name="username" id="submitImage" placeholder="Image url" required autofocus>
+                        <input type="text" class="form-control" name="username" id="submitDescription" placeholder="Description" required autofocus>
+                        <input type="text" class="form-control" name="username" id="submitDifficulty" placeholder="Difficulty" required autofocus>
+                        <button type = "button" class="btn btn-success green btn-block" id = "buttonSubmit">Submit!</button>
+  					</div>
+                </div>
+  					<div class="modal-footer">
+  						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  					</div>
+  					</div>
+
+  				</div>
+  			</div>
+
+		</div>
+
+
+<!-- Comments Modal -->
+	  				<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+			<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" id = "dismissCS1">&times;</button>
+						<h4 class="modal-title" id = "CommentSectionTitle">Modal Header</h4>
+					</div>
+					<div class="modal-body">
+						<p>Comment Section.</p>
+					</div>
+          <div class = "commentBox">
+          	<div class="row">
+          		<h3>Post a comment!</h3>
+          	</div>
+
+              <div class="row">
+
+              <div class="col-md-6">
+  						        <div class="widget-area no-padding blank">
+					              <div class="status-upload">
+			                     <form>
+                             <div class = "textBox">
+                               <div class="form-group">
+                                 <label for="exampleTextarea">Share your opinion!</label>
+                                 <textarea class="form-control" id="commentTyped" rows="3"></textarea>
+                               </div>
+				                       <button type = "button" class="btn btn-success green btn-block" id = "buttonShare">Share</button>
+                               <div id = "fullComment" style="display: none;">
+                                 <div class="media" id = "commentForm">
+                                   <a class="media-left" href="#"><img src="http://lorempixel.com/40/40/people/1/"></a>
+                                   <div class="media-body">
+                                   <h4 class="media-heading user_name" id = "commentUserName">Baltej Singh</h4>
+                                   <p id = "userComment">Wow! this is really great.</p>
+                                   <p><small><a href="">Like</a> - <a href="">Share</a></small></p>
+                                 </div>
+                               </div>
+                               <hr>
+                             </div>
+                            </div>
+			                     </form>
+          								</div><!-- Status Upload  -->
+          							</div><!-- Widget Area -->
+          			</div>
+              </div>
+					</div>
+          <div id ="commentSection">
+
+          </div>
+				</div>
+			</div>
+    </div>
+
+
+<!-- Recipe Modal-->
+      <div id="RecipeModal" class="modal fade" role="dialog">
+  			<div class="modal-dialog">
+
+  			<!-- Modal content-->
+  				<div class="modal-content">
+  					<div class="modal-header">
+  						<button type="button" class="close" data-dismiss="modal" id = "dismissCS2">&times;</button>
+  						<h4 class="modal-title">Recipe</h4>
+  					</div>
+  					<div class="modal-body">
+  					</div>
+            <div class = "commentBox">
+                <img class = "modalImage"/>
+                <p class = "modalRecipe"> </p>
+            	<div class="row">
+            	</div>
+                </div>
+            </div>
+  					<div class="modal-footer">
+  						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  					</div>
+  					</div>
+
+  				</div>
+  			</div>
+
+		</div>
+<!-- Register Modal-->
+      <div id="RegisterModal" class="modal fade" role="dialog">
+  			<div class="modal-dialog">
+
+  			<!-- Modal content-->
+  				<div class="modal-content">
+  					<div class="modal-header">
+  						<button type="button" class="close" data-dismiss="modal" id = "dismissCS3">&times;</button>
+  						<h4 class="modal-title">Register</h4>
+  					</div>
+  					<div class="modal-body">
+  					</div>
+                    <div class="container" id="formContainer1" style="margin-bottom: 20px">
+                          <form class="form-signin" id="register" role="form">
+                            <h3 class="form-signin-heading">Please fill in all fields</h3>
+                            <a href="#" id="flipToRecover1" class="flipLink">
+                              <div id="triangle-topright1"></div>
+                            </a>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required autofocus>
+                            <input type="password" class="form-control" name="loginPass" id="password" placeholder="Password" required>
+                            <button class="btn btn-lg btn-primary btn-block" type="button" id = "registerButtonRequest">Register</button>
+                          </form>
+                        </div>
+            </div>
+  					<div class="modal-footer">
+  						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  					</div>
+  					</div>
+
+  				</div>
+  			</div>
+
+		</div>
+
+<!-- Profile Modal -->
+<!-- Modal -->
+<div id="profileModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" id = "dismissCS">&times;</button>
+    <h4 class="modal-title">Profile</h4>
+  </div>
+  <div class="modal-body">
+    <p ></p>
+  </div>
+  <div class = "commentBox">
+    <div class="row">
+      <h3 class = "modalProfileName"></h3>
+    </div>
+    <div class = "row">
+       <a class="media-left" href="#"><img src="https://lh3.googleusercontent.com/-vxtOFsB6c08/UtWelvFRt3I/AAAAAAAAHpU/VgWmi3EqqaQ/s200-no/anonymous_200.gif"></a>
+    </div>
+      <div class="row">
+      <div class="col-md-6">
+              <div class="widget-area no-padding blank">
+                <div class="status-upload">
+                   <form>
+                     <textarea placeholder="Place the link to your profile pic here!" id = "embedText"></textarea>
+                     <button class="btn btn-success green" id = "Embed">Embed</button>
+                     <div class = "textBox">
+                       <div class="form-group">
+                         <label for="exampleTextarea">Update your description</label>
+                         <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                       </div>
+                       <button class="btn btn-success green" id = "Update">Update!</button>
+                    </div>
+                   </form>
+                  </div><!-- Status Upload  -->
+                </div><!-- Widget Area -->
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+
+    <!-- /.container -->
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
